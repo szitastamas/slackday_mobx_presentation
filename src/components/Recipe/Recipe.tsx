@@ -1,4 +1,4 @@
-import { Recipe as RecipeDefinition } from '../@types/Recipe';
+import { Recipe as RecipeDefinition } from '../../@types/Recipe';
 import {
     Card,
     CardHeader,
