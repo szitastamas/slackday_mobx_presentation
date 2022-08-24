@@ -1,8 +1,13 @@
-import { Recipe } from '../../@types/Recipe';
-import { Fragment } from 'react';
-import { Typography } from '@mui/material';
-
-type RecipeDetails = Omit<Recipe, 'id'>;
+import { RecipeDetails } from '../../@types/Recipe';
+import {
+    Fragment,
+    useState,
+} from 'react';
+import {
+    Typography,
+    FormControl,
+    FilledInput,
+} from '@mui/material';
 
 interface Props {
     details?: RecipeDetails,
@@ -11,11 +16,22 @@ interface Props {
 }
 
 const Form: React.FC<Props> = ({ details, onAdd, onDelete }) => {
+    const isEditMode = !!details;
+
+    const [data, setData] = useState<RecipeDetails>({
+        name: details?.name ?? '',
+        description: details?.description ?? '',
+        preparationTime: details?.preparationTime ?? 0,
+        picture: '',
+    });
     return (
         <Fragment>
             <Typography>
-                Rezept { details ? 'Aktualisieren' : 'Hinzufügen' }
+                Rezept { isEditMode ? 'Aktualisieren' : 'Hinzufügen' }
             </Typography>
+            <FormControl variant="filled">
+                <FilledInput id="name" />
+            </FormControl>
         </Fragment>
     );
 };

@@ -3,8 +3,12 @@ import RecipeList from './components/Recipe/RecipeList';
 import { recipes } from './data';
 import { Recipe } from './@types/Recipe';
 import { v4 } from 'uuid';
+import {
+    Typography,
+    Grid,
+    Container,
+} from '@mui/material';
 import Form from './components/Form/Form';
-import { Grid } from '@mui/material';
 
 const App = () => {
 
@@ -25,11 +29,16 @@ const App = () => {
 
     return (
         <div className="App">
+            <Typography variant={ 'h4' } marginBottom={ 5 } textAlign='center'>
+                Du hast gerade { data.length } Rezepte.
+            </Typography>
             <Grid container>
                 <Grid item xs={ 8 }>
-                    <RecipeList recipes={ data } />
+                    <Container>
+                        <RecipeList recipes={ data } />
+                    </Container>
                 </Grid>
-                <Grid item xs={ 2 }>
+                <Grid item xs={ 4 }>
                     <Form
                         onAdd={ addRecipe }
                         onDelete={ removeRecipe }

@@ -5,3 +5,5 @@ export interface Recipe {
     description?: string;
     picture?: string;
 }
+
+export type RecipeDetails = Omit<Recipe, 'id'>;
