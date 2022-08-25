@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8951137c-44bd-42b1-9f5e-084b339c7159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/with_mobx/src/stores/RecipeStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/with_mobx/src/stores/RootStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/starter_project/src/components/HeadLine.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/with_mobx/src/components/HeadLine.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/starter_project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/starter_project/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/with_mobx/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/with_mobx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/with_mobx/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/with_mobx/src/components/Recipe/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/components/Recipe/Recipe.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/with_mobx/src/components/Recipe/RecipeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/components/Recipe/RecipeList.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,13 +42,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/szitastamas/.nvm/versions/node/v18.1.0",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/szitastamas/slackday/2022/august/mobx_presentation/starter_project/src/components",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_interpreter_path": "wsl://Ubuntu@/home/szitastamas/.nvm/versions/node/v16.15.0/bin/node",
     "nodejs_package_manager_path": "\\\\wsl$\\Ubuntu\\home\\szitastamas\\.nvm\\versions\\node\\v18.1.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "\\\\wsl$\\Ubuntu\\home\\szitastamas\\slackday\\2022\\august\\mobx_presentation\\with_mobx\\node_modules\\typescript\\lib"
+    "ts.external.directory.path": "\\\\wsl$\\Ubuntu\\home\\szitastamas\\slackday\\2022\\august\\mobx_presentation\\starter_project\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -76,7 +73,8 @@
       <workItem from="1661345101398" duration="4105000" />
       <workItem from="1661411627475" duration="3041000" />
       <workItem from="1661415401089" duration="1041000" />
-      <workItem from="1661416488298" duration="873000" />
+      <workItem from="1661416488298" duration="1270000" />
+      <workItem from="1661420408602" duration="798000" />
     </task>
     <servers />
   </component>

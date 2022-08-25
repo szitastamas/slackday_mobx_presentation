@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import RecipeList from './components/Recipe/RecipeList';
-import { recipes, randoms } from './data';
-import { Recipe } from './@types/Recipe';
 import {
-    Typography,
-    Container,
-    Grid,
-    Button,
-} from '@mui/material';
+    recipes,
+    randoms,
+} from './data';
+import { Recipe } from './@types/Recipe';
+import { Container } from '@mui/material';
 import { getRandomFromArray } from './utils/getRandomFromArray';
+import HeadLine from './components/HeadLine';
 
 const App = () => {
 
@@ -28,15 +27,8 @@ const App = () => {
 
     return (
         <div className="App">
-            <Grid container alignItems="center" justifyContent="space-between" marginBottom={ 5 }>
-                <Typography variant={ 'h4' } textAlign="center">
-                    Du hast gerade { data.length } Rezepte.
-                </Typography>
-                <Button variant="contained" onClick={ () => addRecipe(getRandomFromArray(randoms)) }>
-                    Rezept Hinzufügen
-                </Button>
-            </Grid>
             <Container>
+                <HeadLine count={ data.length } onClick={ () => addRecipe(getRandomFromArray(randoms)) } />
                 <RecipeList recipes={ data } onRemove={ removeRecipe } />
             </Container>
         </div>
