@@ -6,7 +6,7 @@ import rootStore from '../..//stores/RootStore';
 
 const RecipeList: React.FC = () => {
     const { recipeStore } = useContext(rootStore);
-    console.log(recipeStore)
+
     return (
         <Grid container>
             <Grid className="recipe-grid" container spacing={ 2 }>

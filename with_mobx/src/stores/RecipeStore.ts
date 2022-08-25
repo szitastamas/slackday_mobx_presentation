@@ -18,9 +18,8 @@ export class RecipeStore {
 
         reaction(() => this.recipes,
             (newRecipes) => {
-                if (this.selectedRecipe
-                    && !newRecipes.find(recipe => recipe.id === this.selectedRecipe?.id)) {
-                    this.selectedRecipe = null;
+                if (this.selectedRecipe && !newRecipes.find(recipe => recipe.id === this.selectedRecipe?.id)) {
+                    this.setSelectedRecipe(null);
                 }
             });
     }
