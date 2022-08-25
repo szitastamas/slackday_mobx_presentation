@@ -7,6 +7,7 @@ import { getRandomFromArray } from '../utils/getRandomFromArray';
 import { randoms } from '../data';
 import React, { useContext } from 'react';
 import rootStore from '../stores/RootStore';
+import { observer } from 'mobx-react-lite';
 
 const HeadLine: React.FC = () => {
     const { recipeStore } = useContext(rootStore);
@@ -28,4 +29,4 @@ const HeadLine: React.FC = () => {
     );
 };
 
-export default HeadLine;
+export default observer(HeadLine);
