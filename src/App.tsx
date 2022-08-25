@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import RecipeList from './components/Recipe/RecipeList';
-import { recipes } from './data';
+import {
+    recipes,
+    randoms,
+} from './data';
 import { Recipe } from './@types/Recipe';
-import { v4 } from 'uuid';
 import {
     Typography,
     Container,
@@ -14,11 +16,10 @@ const App = () => {
 
     const [data, setData] = useState(recipes);
 
-    const addRecipe = (recipeData: Omit<Recipe, 'id'>) => {
-        const recipe = {
-            ...recipeData,
-            id: v4(),
-        };
+    const addRecipe = (recipe: Recipe) => {
+        if (data.find(item => item.id === recipe.id)) {
+            return;
+        }
 
         setData([...data, recipe]);
     };
@@ -27,13 +28,18 @@ const App = () => {
         setData(recipes => recipes.filter((recipe) => recipe.id !== id));
     };
 
+    const getRandomRecipe = () => {
+        const rng = Math.floor(Math.random() * randoms.length);
+        return randoms[rng];
+    };
+
     return (
         <div className="App">
             <Grid container alignItems="center" justifyContent="space-between" marginBottom={ 5 }>
                 <Typography variant={ 'h4' } textAlign="center">
                     Du hast gerade { data.length } Rezepte.
                 </Typography>
-                <Button variant="contained">
+                <Button variant="contained" onClick={ () => addRecipe(getRandomRecipe()) }>
                     Rezept Hinzufügen
                 </Button>
             </Grid>
