@@ -5,10 +5,10 @@ import { Recipe } from './@types/Recipe';
 import { v4 } from 'uuid';
 import {
     Typography,
-    Grid,
     Container,
+    Grid,
+    Button,
 } from '@mui/material';
-import Form from './components/Form/Form';
 
 const App = () => {
 
@@ -29,22 +29,17 @@ const App = () => {
 
     return (
         <div className="App">
-            <Typography variant={ 'h4' } marginBottom={ 5 } textAlign='center'>
-                Du hast gerade { data.length } Rezepte.
-            </Typography>
-            <Grid container>
-                <Grid item xs={ 8 }>
-                    <Container>
-                        <RecipeList recipes={ data } />
-                    </Container>
-                </Grid>
-                <Grid item xs={ 4 }>
-                    <Form
-                        onAdd={ addRecipe }
-                        onDelete={ removeRecipe }
-                    />
-                </Grid>
+            <Grid container alignItems="center" justifyContent="space-between" marginBottom={ 5 }>
+                <Typography variant={ 'h4' } textAlign="center">
+                    Du hast gerade { data.length } Rezepte.
+                </Typography>
+                <Button variant="contained">
+                    Rezept Hinzufügen
+                </Button>
             </Grid>
+            <Container>
+                <RecipeList recipes={ data } />
+            </Container>
         </div>
     );
 };
