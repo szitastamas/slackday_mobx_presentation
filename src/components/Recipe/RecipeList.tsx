@@ -5,13 +5,19 @@ import Recipe from './Recipe';
 
 interface Props {
     recipes: RecipeDefinition[];
+    onRemove: (id: string) => void;
 }
 
-const RecipeList: React.FC<Props> = ({ recipes }) => {
+const RecipeList: React.FC<Props> = ({ recipes, onRemove }) => {
     return (
         <Grid container>
             <Grid className="recipe-grid" container spacing={ 2 }>
-                { recipes.map(recipe => <Recipe key={ recipe.id } recipe={ recipe } />) }
+                { recipes.map(recipe => (
+                    <Recipe
+                        key={ recipe.id }
+                        recipe={ recipe }
+                        removeSelf={ () => onRemove(recipe.id) }
+                    />)) }
             </Grid>
         </Grid>
     );

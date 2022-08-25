@@ -6,13 +6,16 @@ import {
     Grid,
     CardContent,
     Typography,
+    CardActions,
+    Button,
 } from '@mui/material';
 
 interface Props {
     recipe: RecipeDefinition;
+    removeSelf: () => void;
 }
 
-const Recipe: React.FC<Props> = ({ recipe }) => {
+const Recipe: React.FC<Props> = ({ recipe, removeSelf }) => {
     return (
         <Grid item xs={ 4 }>
             <Card>
@@ -26,6 +29,14 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
                         { recipe.description }
                     </Typography>
                 </CardContent>
+                <CardActions>
+                    <Button
+                        color="error"
+                        variant="outlined"
+                        onClick={ removeSelf }>
+                        Entfernen
+                    </Button>
+                </CardActions>
             </Card>
         </Grid>
     );
