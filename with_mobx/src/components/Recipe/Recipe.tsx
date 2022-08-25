@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { useContext } from 'react';
 import rootStore from '../../stores/RootStore';
+import { observer } from 'mobx-react-lite';
 
 interface Props {
     recipe: RecipeDefinition;
@@ -20,10 +21,12 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
     const { recipeStore } = useContext(rootStore);
     return (
         <Grid item xs={ 4 }>
-            <Card>
+            <Card data-selected={ recipeStore.selectedRecipe?.id === recipe.id }
+                  raised={ recipeStore.selectedRecipe?.id === recipe.id }>
                 <CardHeader
                     title={ recipe.name }
                     subheader={ `${ recipe.preparationTime } Minuten` }
+                    onClick={ () => recipeStore.setSelectedRecipe(recipe) }
                 />
                 <CardMedia component="img" height="175" src={ recipe.picture } />
                 <CardContent>
@@ -44,4 +47,4 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
     );
 };
 
-export default Recipe;
+export default observer(Recipe);

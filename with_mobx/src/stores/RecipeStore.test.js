@@ -29,4 +29,15 @@ describe('RecipeStore', () => {
             expect(store.recipes).toHaveLength(4);
         });
     });
+
+    describe('removeRecipe()', () => {
+        it('deletes the selected recipe', () => {
+            const store = setup();
+
+            store.addRecipe({ id: '1' })
+            store.removeRecipe('1');
+
+            expect(store.recipes).toHaveLength(3);
+        })
+    })
 });
