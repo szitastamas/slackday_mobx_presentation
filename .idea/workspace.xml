@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8951137c-44bd-42b1-9f5e-084b339c7159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/starter_project/src/components/HeadLine.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/with_mobx/src/components/HeadLine.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/with_mobx/src/stores/RecipeStore.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/starter_project/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/starter_project/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/with_mobx/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with_mobx/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with_mobx/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +17,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -52,6 +51,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\szitastamas\slackday\2022\august\mobx_presentation\starter_project\src\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="\\wsl$\Ubuntu\home\szitastamas\slackday\2022\august\mobx_presentation\starter_project" />
       <recent name="\\wsl$\Ubuntu\home\szitastamas\slackday\2022\august\mobx_presentation\src\components\Recipe" />
@@ -74,7 +76,7 @@
       <workItem from="1661411627475" duration="3041000" />
       <workItem from="1661415401089" duration="1041000" />
       <workItem from="1661416488298" duration="1270000" />
-      <workItem from="1661420408602" duration="798000" />
+      <workItem from="1661420408602" duration="1469000" />
     </task>
     <servers />
   </component>

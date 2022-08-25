@@ -25,7 +25,7 @@ export const recipes: Recipe[] = [
     },
 ]
 
-export const randoms = [
+export const randoms: Recipe[] = [
     {
         id: v4(),
         name: 'Palatschinken',
