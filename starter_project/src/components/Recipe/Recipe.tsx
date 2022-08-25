@@ -12,16 +12,21 @@ import {
 
 interface Props {
     recipe: RecipeDefinition;
+    selected: boolean;
+    selectSelf: () => void;
     removeSelf: () => void;
 }
 
-const Recipe: React.FC<Props> = ({ recipe, removeSelf }) => {
+const Recipe: React.FC<Props> = ({ recipe, selected, selectSelf, removeSelf }) => {
     return (
         <Grid item xs={ 4 }>
-            <Card>
+            <Card
+                raised={ selected }
+            >
                 <CardHeader
                     title={ recipe.name }
                     subheader={ `${ recipe.preparationTime } Minuten` }
+                    onClick={ selectSelf }
                 />
                 <CardMedia component="img" height="175" src={ recipe.picture } />
                 <CardContent>

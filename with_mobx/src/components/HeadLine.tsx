@@ -10,8 +10,14 @@ import rootStore from '../stores/RootStore';
 
 const HeadLine: React.FC = () => {
     const { recipeStore } = useContext(rootStore);
+
     return (
-        <Grid container alignItems="center" justifyContent="space-between" marginBottom={ 5 }>
+        <Grid
+            container
+            alignItems="center"
+            justifyContent="space-between"
+            marginBottom={ 5 }
+        >
             <Typography variant={ 'h4' } textAlign="center">
                 Du hast gerade { recipeStore.recipes.length } Rezepte.
             </Typography>

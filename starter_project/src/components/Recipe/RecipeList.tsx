@@ -5,10 +5,12 @@ import Recipe from './Recipe';
 
 interface Props {
     recipes: RecipeDefinition[];
+    selectedRecipe: RecipeDefinition | undefined;
+    onSelect: (id: string) => void;
     onRemove: (id: string) => void;
 }
 
-const RecipeList: React.FC<Props> = ({ recipes, onRemove }) => {
+const RecipeList: React.FC<Props> = ({ recipes, selectedRecipe, onSelect, onRemove }) => {
     return (
         <Grid container>
             <Grid className="recipe-grid" container spacing={ 2 }>
@@ -16,6 +18,8 @@ const RecipeList: React.FC<Props> = ({ recipes, onRemove }) => {
                     <Recipe
                         key={ recipe.id }
                         recipe={ recipe }
+                        selected={ recipe.id === selectedRecipe?.id }
+                        selectSelf={ () => onSelect(recipe.id) }
                         removeSelf={ () => onRemove(recipe.id) }
                     />)) }
             </Grid>

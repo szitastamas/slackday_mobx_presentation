@@ -19,6 +19,7 @@ interface Props {
 
 const Recipe: React.FC<Props> = ({ recipe }) => {
     const { recipeStore } = useContext(rootStore);
+
     return (
         <Grid item xs={ 4 }>
             <Card raised={ recipeStore.selectedRecipe?.id === recipe.id }>
