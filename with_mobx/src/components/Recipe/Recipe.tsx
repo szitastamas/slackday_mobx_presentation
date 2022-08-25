@@ -21,8 +21,7 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
     const { recipeStore } = useContext(rootStore);
     return (
         <Grid item xs={ 4 }>
-            <Card data-selected={ recipeStore.selectedRecipe?.id === recipe.id }
-                  raised={ recipeStore.selectedRecipe?.id === recipe.id }>
+            <Card raised={ recipeStore.selectedRecipe?.id === recipe.id }>
                 <CardHeader
                     title={ recipe.name }
                     subheader={ `${ recipe.preparationTime } Minuten` }
