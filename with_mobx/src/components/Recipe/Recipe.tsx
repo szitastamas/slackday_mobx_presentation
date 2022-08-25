@@ -9,24 +9,30 @@ import {
     CardActions,
     Button,
 } from '@mui/material';
-import { useContext } from 'react';
-import rootStore from '../../stores/RootStore';
 import { observer } from 'mobx-react-lite';
 
 interface Props {
     recipe: RecipeDefinition;
+    selected: boolean;
+    selectSelf: () => void;
+    removeSelf: () => void;
 }
 
-const Recipe: React.FC<Props> = ({ recipe }) => {
-    const { recipeStore } = useContext(rootStore);
-
+const Recipe: React.FC<Props> = (
+    {
+        recipe,
+        selected,
+        selectSelf,
+        removeSelf,
+    },
+) => {
     return (
         <Grid item xs={ 4 }>
-            <Card raised={ recipeStore.selectedRecipe?.id === recipe.id }>
+            <Card raised={ selected }>
                 <CardHeader
                     title={ recipe.name }
                     subheader={ `${ recipe.preparationTime } Minuten` }
-                    onClick={ () => recipeStore.setSelectedRecipe(recipe) }
+                    onClick={ selectSelf }
                 />
                 <CardMedia component="img" height="175" src={ recipe.picture } />
                 <CardContent>
@@ -38,7 +44,7 @@ const Recipe: React.FC<Props> = ({ recipe }) => {
                     <Button
                         color="error"
                         variant="outlined"
-                        onClick={ () => recipeStore.removeRecipe(recipe.id) }>
+                        onClick={ removeSelf }>
                         Entfernen
                     </Button>
                 </CardActions>

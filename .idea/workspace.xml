@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8951137c-44bd-42b1-9f5e-084b339c7159" name="Changes" comment="" />
+    <list default="true" id="8951137c-44bd-42b1-9f5e-084b339c7159" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/with_mobx/src/components/Recipe/Recipe.connected.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with_mobx/src/components/Recipe/Recipe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/components/Recipe/Recipe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/with_mobx/src/components/Recipe/RecipeList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/with_mobx/src/components/Recipe/RecipeList.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,9 +15,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -71,7 +76,7 @@
       <workItem from="1661411627475" duration="3041000" />
       <workItem from="1661415401089" duration="1041000" />
       <workItem from="1661416488298" duration="1270000" />
-      <workItem from="1661420408602" duration="7400000" />
+      <workItem from="1661420408602" duration="8552000" />
     </task>
     <servers />
   </component>
