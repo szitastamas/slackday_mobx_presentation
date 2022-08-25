@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import RecipeList from 'src/components/Recipe/RecipeList';
-import { recipes } from 'src/data';
-import { Recipe } from 'src/@types/Recipe';
+import RecipeList from './components/Recipe/RecipeList';
+import { recipes } from './data';
+import { Recipe } from './@types/Recipe';
 import {
     Typography,
     Container,
     Grid,
     Button,
 } from '@mui/material';
-import { getRandomFromArray } from 'src/utils/getRandomFromArray';
+import { getRandomFromArray } from './utils/getRandomFromArray';
 
 const App = () => {
 
