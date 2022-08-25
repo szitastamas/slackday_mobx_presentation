@@ -1,43 +1,29 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
 import RecipeList from './components/Recipe/RecipeList';
-import { recipes } from './data';
-import { Recipe } from './@types/Recipe';
 import {
     Typography,
     Container,
     Grid,
     Button,
 } from '@mui/material';
+import rootStore from './stores/RootStore';
 import { getRandomFromArray } from './utils/getRandomFromArray';
+import { randoms } from './data';
 
 const App = () => {
-
-    const [data, setData] = useState(recipes);
-
-    const addRecipe = (recipe: Recipe) => {
-        if (data.find(item => item.id === recipe.id)) {
-            return;
-        }
-
-        setData([...data, recipe]);
-    };
-
-    const removeRecipe = (id: string) => {
-        setData(recipes => recipes.filter((recipe) => recipe.id !== id));
-    };
-
+    const { recipeStore } = useContext(rootStore);
     return (
         <div className="App">
             <Grid container alignItems="center" justifyContent="space-between" marginBottom={ 5 }>
                 <Typography variant={ 'h4' } textAlign="center">
-                    Du hast gerade { data.length } Rezepte.
+                    Du hast gerade { recipeStore.recipes.length } Rezepte.
                 </Typography>
-                <Button variant="contained" onClick={ () => addRecipe(getRandomFromArray(data)) }>
+                <Button variant="contained" onClick={ () => recipeStore.addRecipe(getRandomFromArray(randoms)) }>
                     Rezept Hinzufügen
                 </Button>
             </Grid>
             <Container>
-                <RecipeList recipes={ data } onRemove={ removeRecipe } />
+                <RecipeList />
             </Container>
         </div>
     );

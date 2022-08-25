@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import RecipeList from './components/Recipe/RecipeList';
-import { recipes } from './data';
+import { recipes, randoms } from './data';
 import { Recipe } from './@types/Recipe';
 import {
     Typography,
@@ -32,7 +32,7 @@ const App = () => {
                 <Typography variant={ 'h4' } textAlign="center">
                     Du hast gerade { data.length } Rezepte.
                 </Typography>
-                <Button variant="contained" onClick={ () => addRecipe(getRandomFromArray(data)) }>
+                <Button variant="contained" onClick={ () => addRecipe(getRandomFromArray(randoms)) }>
                     Rezept Hinzufügen
                 </Button>
             </Grid>

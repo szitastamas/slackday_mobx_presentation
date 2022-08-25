@@ -9,13 +9,15 @@ import {
     CardActions,
     Button,
 } from '@mui/material';
+import { useContext } from 'react';
+import rootStore from '../../stores/RootStore';
 
 interface Props {
     recipe: RecipeDefinition;
-    removeSelf: () => void;
 }
 
-const Recipe: React.FC<Props> = ({ recipe, removeSelf }) => {
+const Recipe: React.FC<Props> = ({ recipe }) => {
+    const { recipeStore } = useContext(rootStore);
     return (
         <Grid item xs={ 4 }>
             <Card>
@@ -33,7 +35,7 @@ const Recipe: React.FC<Props> = ({ recipe, removeSelf }) => {
                     <Button
                         color="error"
                         variant="outlined"
-                        onClick={ removeSelf }>
+                        onClick={ () => recipeStore.removeRecipe(recipe.id) }>
                         Entfernen
                     </Button>
                 </CardActions>

@@ -1,26 +1,22 @@
-import { Recipe as RecipeDefinition } from '../..//@types/Recipe';
-import React from 'react';
+import React, { useContext } from 'react';
+import { observer } from 'mobx-react-lite';
 import { Grid } from '@mui/material';
 import Recipe from './Recipe';
+import rootStore from '../..//stores/RootStore';
 
-interface Props {
-    recipes: RecipeDefinition[];
-    onRemove: (id: string) => void;
-}
-
-const RecipeList: React.FC<Props> = ({ recipes, onRemove }) => {
+const RecipeList: React.FC = () => {
+    const { recipeStore } = useContext(rootStore);
     return (
         <Grid container>
             <Grid className="recipe-grid" container spacing={ 2 }>
-                { recipes.map(recipe => (
+                { recipeStore.recipes.map(recipe => (
                     <Recipe
                         key={ recipe.id }
                         recipe={ recipe }
-                        removeSelf={ () => onRemove(recipe.id) }
                     />)) }
             </Grid>
         </Grid>
     );
 };
 
-export default RecipeList;
+export default observer(RecipeList);
