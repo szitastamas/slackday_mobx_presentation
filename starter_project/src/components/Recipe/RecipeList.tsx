@@ -5,7 +5,7 @@ import Recipe from './Recipe';
 
 interface Props {
     recipes: RecipeDefinition[];
-    selectedRecipe: RecipeDefinition | undefined;
+    selectedRecipe: string | null;
     onSelect: (id: string) => void;
     onRemove: (id: string) => void;
 }
@@ -18,7 +18,7 @@ const RecipeList: React.FC<Props> = ({ recipes, selectedRecipe, onSelect, onRemo
                     <Recipe
                         key={ recipe.id }
                         recipe={ recipe }
-                        selected={ recipe.id === selectedRecipe?.id }
+                        selected={ recipe.id === selectedRecipe }
                         selectSelf={ () => onSelect(recipe.id) }
                         removeSelf={ () => onRemove(recipe.id) }
                     />)) }

@@ -10,10 +10,8 @@ import { getRandomFromArray } from './utils/getRandomFromArray';
 import HeadLine from './components/HeadLine';
 
 const App = () => {
-
     const [data, setData] = useState(recipes);
-    const [selectedId, setSelectedId] = useState<string | null>(null);
-    const selectedRecipe = data.find(recipe => recipe.id === selectedId);
+    const [selectedRecipe, setSelectedRecipe] = useState<string | null>(null);
 
     const addRecipe = (recipe: Recipe) => {
         if (data.find(item => item.id === recipe.id)) {
@@ -24,12 +22,12 @@ const App = () => {
     };
 
     const selectRecipe = (id: string) => {
-        setSelectedId(id);
+        setSelectedRecipe(id);
     };
 
     const removeRecipe = (id: string) => {
-        if (selectedId === id) {
-            setSelectedId(null);
+        if (selectedRecipe === id) {
+            setSelectedRecipe(null);
         }
 
         setData(recipes => recipes.filter((recipe) => recipe.id !== id));
