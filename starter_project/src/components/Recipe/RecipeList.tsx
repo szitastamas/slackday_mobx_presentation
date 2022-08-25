@@ -1,7 +1,7 @@
 import { Recipe as RecipeDefinition } from '../..//@types/Recipe';
 import React from 'react';
 import { Grid } from '@mui/material';
-import Recipe from './Recipe';
+import Recipe from 'src/components/Recipe/Recipe';
 
 interface Props {
     recipes: RecipeDefinition[];
